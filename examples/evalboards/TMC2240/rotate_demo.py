@@ -17,8 +17,8 @@ with ConnectionManager().connect() as my_interface:
     motor = eval_board.motors[0]
 
     print("Preparing parameter...")
-    motor.set_axis_parameter(motor.AP.MaxAcceleration, 2000)
-    motor.set_axis_parameter(motor.AP.MaxVelocity, 1000)
+    motor.set_axis_parameter(motor.AP.MaxAcceleration, 000)
+    motor.set_axis_parameter(motor.AP.MaxVelocity, 000)
     motor.set_axis_parameter(motor.AP.MaxCurrent, 3000)
 
     # Clear actual positions
