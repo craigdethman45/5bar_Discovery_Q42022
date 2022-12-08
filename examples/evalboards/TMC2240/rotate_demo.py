@@ -25,7 +25,7 @@ with ConnectionManager().connect() as my_interface:
     motor.actual_position = 0
 
     print("Rotating...")
-    motor.rotate(7*2560)
+    motor.rotate(0)
     time.sleep(5)
 
     print("Stopping...")
