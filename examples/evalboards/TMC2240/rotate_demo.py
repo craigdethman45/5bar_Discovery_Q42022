@@ -17,7 +17,7 @@ with ConnectionManager().connect() as my_interface:
     motor = eval_board.motors[0]
 
     print("Preparing parameter...")
-    motor.set_axis_parameter(motor.AP.MaxAcceleration, 20000)
+    motor.set_axis_parameter(motor.AP.MaxAcceleration, 2000)
     motor.set_axis_parameter(motor.AP.MaxVelocity, 100000)
     motor.set_axis_parameter(motor.AP.MaxCurrent, 30)
 
@@ -33,7 +33,7 @@ with ConnectionManager().connect() as my_interface:
     time.sleep(1)
 
     print("Moving back to 0...")
-    motor.move_to(0, 100000)
+    motor.move_to(0, 10000)
 
     # Wait until position 0 is reached
     while motor.actual_position != 0:
